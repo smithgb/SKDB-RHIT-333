@@ -35,3 +35,5 @@ webdav/
 *.dat
 *.txt
 *.log
+
+.metadata/
