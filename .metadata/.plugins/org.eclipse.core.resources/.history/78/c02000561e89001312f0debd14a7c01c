@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<LINK type = "text/css" rel = "stylesheet" href="bootstrap.css">
+<script type= 'text/javascript' src="bootstrap.js"></script>
+<title>SKDB</title>
+<body>
+	<div>
+
+		<!-- website logo -->
+		<img src="images/logo.jpg" alt="SKDB_logo">
+
+		<!-- navbar -->
+		<nav class="navbar navbar-default" role="navigation" style="font-size: 20px">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="killer-dropdown">
+				<div class="dropdown">
+					<button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						Dropdown
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">Action</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">Another action</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">Something else here</a>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#">Separated link</a>
+						</li>
+					</ul>
+				</div>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						Submit
+					</button>
+				</form>
+
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+	</div>
+</body>
