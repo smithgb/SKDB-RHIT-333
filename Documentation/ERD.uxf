@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.custom.EER_Entity</type>
+    <coordinates>
+      <x>408</x>
+      <y>304</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Serial Killer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>584</x>
+      <y>296</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Kills</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>464</x>
+      <y>288</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>464</x>
+      <y>296</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m2=1</panel_attributes>
+    <additional_attributes>128;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>664</x>
+      <y>376</y>
+      <w>56</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;32;40;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>584</x>
+      <y>240</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Date of
+Death</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>600</x>
+      <y>248</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>632</x>
+      <y>288</y>
+      <w>168</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m2=M</panel_attributes>
+    <additional_attributes>24;24;152;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Entity</type>
+    <coordinates>
+      <x>784</x>
+      <y>304</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Victim</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Entity</type>
+    <coordinates>
+      <x>640</x>
+      <y>448</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Location</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>784</x>
+      <y>240</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_VID_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>248</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Entity</type>
+    <coordinates>
+      <x>560</x>
+      <y>504</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Police
+Record</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>656</x>
+      <y>416</y>
+      <w>40</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;32</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>656</x>
+      <y>408</y>
+      <w>48</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_LocID_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>688</x>
+      <y>368</y>
+      <w>48</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_Zipcode_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>624</x>
+      <y>368</y>
+      <w>48</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_Country_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>424</x>
+      <y>304</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>m1=N</panel_attributes>
+    <additional_attributes>24;24;120;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>624</x>
+      <y>376</y>
+      <w>64</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>48;32;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>504</x>
+      <y>376</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Kills_In</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>392</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>m2= M</panel_attributes>
+    <additional_attributes>24;24;120;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>384</x>
+      <y>496</y>
+      <w>80</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Earned</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>784</x>
+      <y>304</y>
+      <w>56</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>m1= M</panel_attributes>
+    <additional_attributes>40;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>400</x>
+      <y>304</y>
+      <w>40</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>m1= 1</panel_attributes>
+    <additional_attributes>24;24;24;192</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>496</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>568</x>
+      <y>576</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_Case#_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>576</x>
+      <y>520</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>840</x>
+      <y>296</y>
+      <w>96</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>m2=N</panel_attributes>
+    <additional_attributes>24;224;80;224;80;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>776</x>
+      <y>304</y>
+      <w>56</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>40;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>760</x>
+      <y>392</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Killed_In</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>408</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>m2=1</panel_attributes>
+    <additional_attributes>104;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>792</x>
+      <y>504</y>
+      <w>88</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Contained_In</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>616</x>
+      <y>504</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m1= M</panel_attributes>
+    <additional_attributes>24;24;176;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>840</x>
+      <y>288</y>
+      <w>104</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>40;240;88;240;88;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>432</x>
+      <y>504</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m2= M</panel_attributes>
+    <additional_attributes>24;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>408</x>
+      <y>240</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>_SID_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>416</x>
+      <y>248</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>192</x>
+      <y>392</y>
+      <w>184</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Police Record Attributes (Tentative)
+--
+Dept/Agency
+Case Start
+Case End
+Detective
+Serial Killer
+Suspects</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>424</x>
+      <y>128</y>
+      <w>224</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Serial Killer Attributes (Tentative)
+--
+Name, Birthplace, Gender, Lived, BirthDay,
+#ofVictims, YearsOfActivity, DiedWhen,
+DateOfArrest, Sentance, TypeOfKiller,
+Disorder, Motive</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>792</x>
+      <y>128</y>
+      <w>184</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Victim Attributes (Tentative)
+--
+Name
+Age
+Birthplace
+LocationOfMurder
+DateOfDeath
+RelationToKiller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>192</x>
+      <y>264</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Location Attributes (Tentative)
+--
+City
+State/Province
+Victim</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>192</x>
+      <y>128</y>
+      <w>128</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Jonathan Earles
+Christopher O'hara
+Corey Vatter
+Grant Smith
+
+CSSE333
+
+Serial Killer DB</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>192</x>
+      <y>576</y>
+      <w>368</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Constraints
+--
+1) A Serial Killer can exist without a known location with kills
+2) A location however, can't exist without a Victim
+3) A Serial Killer can't exist without a Victim
+3) ZipCodes must be valid:
+       -no negatives
+       -only integers
+4) A Police Record can't exist without a Serial Killer
+       -we will not be discussing unknown murder cases
+5) DataType Constraints:
+       -Dates =&gt; Date types
+       -Zipode =&gt; int
+       -ID numbers =&gt; int
+       -Age, #OfVictims etc =&gt; int
+       Everything else =&gt; String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
