@@ -1,0 +1,37 @@
+#############################
+# XAMPP FILES and FOLDERS   #
+# #@ denotes included files #
+#############################
+
+anonymous/
+apache/
+cgi-bin/
+contrib/
+FileZillaFTP/
+#@htdocs
+img/
+install/
+licenses/
+locale/
+mailoutput/
+mailtodisk/
+MercuryMail/
+mysql/
+perl/
+php/
+phpMyAdmin/
+SCRATCH/
+security/
+sendmail/
+src/
+tmp/
+tomcat/
+webalizer/
+webdav/
+
+*.bat
+*.exe
+*.ini
+*.dat
+*.txt
+*.log
