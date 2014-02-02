@@ -16,7 +16,7 @@ locale/
 mailoutput/
 mailtodisk/
 MercuryMail/
-#@mysql
+mysql
 perl/
 php/
 phpMyAdmin/
