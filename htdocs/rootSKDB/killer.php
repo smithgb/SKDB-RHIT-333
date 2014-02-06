@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+<?php
+	$SID = $_GET['SID'];
+
+	$conn = mysql_connect('localhost', 'root', '')or die(mysql_error());
+
+	mysql_select_db('skdb') or die(mysql_error());
+
+	$result = mysql_query("SELECT * FROM serialkiller WHERE SID=".$SID."" );
+
+
+	$row = mysql_fetch_array($result);
+
+	$picture = $row['ImagePath'];
+
+?>
+
+
 <html>
 <head>
 	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
 	<script type="text/javascript" src='../javascript/jquery.js'></script>
 	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
-	<title>SKDB</title>
+	<?php echo '<title>' . $row['FName']. ' ' . $row['LName'] .'</title>'?>
 </head>
 <body>
 	<div>
@@ -52,8 +68,36 @@
 	</div>
 
 	<div>
-	<a href = '/rootSKDB/input.html'>Edit</a>
 
 
-</body>
-</html>
+	</body>
+	</html>
+
+	<div style="padding-left: 5%">
+	<?php
+
+	echo "<img src= ".$picture." height = 400px><br />";
+
+	echo "<h2>" . $row['FName'] . " " . $row['LName'] . "</h2>";
+
+	?>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<?php
+
+	mysql_close($conn);
+
+	?>
