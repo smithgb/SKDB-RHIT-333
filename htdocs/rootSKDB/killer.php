@@ -106,6 +106,8 @@ if($row['Gender'] == "M"){
 
 				echo "<h4>Motive: <a href = '/rootSKDB/motive.php?MID=" . $motive['MID'] . "'>" . $motive['Name'] . "</h4> </a><br />";
 
+				//TODO ADD DISORDERS
+
 
 				echo "<h4>Gender: " . $gender . "</h4>";
 
