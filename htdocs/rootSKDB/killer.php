@@ -21,6 +21,8 @@ $category = mysql_fetch_array(mysql_query("SELECT * FROM category WHERE CID=".$r
 
 $motive = mysql_fetch_array(mysql_query("SELECT * FROM motive WHERE MID=".$row['Motive']."" ));
 
+$disorders = mysql_query("SELECT * FROM disorder, hasdisorder WHERE hasdisorder.DID = disorder.DID AND hasdisorder.SID=".$row['SID']."" );
+
 $picture = $row['ImagePath'];
 
 if($row['Gender'] == "M"){
@@ -84,14 +86,13 @@ if($row['Gender'] == "M"){
 		</nav>
 	</div>
 
-	<div>
 
 
 <!-- Not making columns like I wanted -->
 
 	<div class="container">
 		<div class="row">
-			<div class="span4">
+			<div class="col-md-4">
 				<?php
 
 				echo "<img src= ".$picture." height = 400px><br />";
@@ -106,7 +107,13 @@ if($row['Gender'] == "M"){
 
 				echo "<h4>Motive: <a href = '/rootSKDB/motive.php?MID=" . $motive['MID'] . "'>" . $motive['Name'] . "</h4> </a><br />";
 
+				echo "<h4>Disorders and Factors:</h4>\n";
+
 				//TODO ADD DISORDERS
+				while($disorder = mysql_fetch_array($disorders)){
+					echo "<h4><a href = '/rootSKDB/disorder.php?DID=" . $disorder['DID'] . "'>" . $disorder['Name'] . "</a></h4>\n";
+				}
+				echo "<br />";
 
 
 				echo "<h4>Gender: " . $gender . "</h4>";
@@ -134,7 +141,7 @@ if($row['Gender'] == "M"){
 
 				?>
 			</div>  
-			<div class="span6">
+			<div class="col-md-8">
 				<?php
 
 				echo "<p>" . $row['Biography'] . "<p>";
