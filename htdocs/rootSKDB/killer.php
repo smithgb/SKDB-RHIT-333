@@ -1,9 +1,9 @@
 <?php
 $SID = $_GET['SID'];
 
-$conn = mysql_connect('localhost', 'root', '')or die(mysql_error());
+$conn = mysql_connect('localhost', 'skdb333x_grant', 'pyhml249213')or die(mysql_error());
 
-mysql_select_db('skdb') or die(mysql_error());
+mysql_select_db('skdb333x_skdb') or die(mysql_error());
 
 $result = mysql_query("SELECT * FROM serialkiller WHERE SID=".$SID."" );
 
