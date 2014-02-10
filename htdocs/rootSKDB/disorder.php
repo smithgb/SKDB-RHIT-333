@@ -1,8 +1,10 @@
 <?php
 $DID = $_GET['DID'];
 
-$conn = mysql_connect('localhost', 'skdb333x_grant', 'pyhml249213')or die(mysql_error());
+// $conn = mysql_connect('localhost', 'root', '')or die(mysql_error());
+$conn = mysql_connect('localhost', 'skdb333x_root', '')or die(mysql_error());
 
+// mysql_select_db('skdb') or die(mysql_error());
 mysql_select_db('skdb333x_skdb') or die(mysql_error());
 
 $result = mysql_query("SELECT * FROM disorder WHERE DID=".$DID."" );
