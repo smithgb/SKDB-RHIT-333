@@ -2,10 +2,10 @@
 $SID = $_GET['SID'];
 
 // $conn = mysql_connect('localhost', 'root', '')or die(mysql_error());
-$conn = mysql_connect('localhost', 'skdb333x_root', '')or die(mysql_error());
+$conn = mysql_connect('localhost', 'root', '')or die(mysql_error());
 
 // mysql_select_db('skdb') or die(mysql_error());
-mysql_select_db('skdb333x_skdb') or die(mysql_error());
+mysql_select_db('skdb') or die(mysql_error());
 
 $result = mysql_query("SELECT * FROM serialkiller WHERE SID=".$SID."" );
 
@@ -25,7 +25,7 @@ $motive = mysql_fetch_array(mysql_query("SELECT * FROM motive WHERE MID=".$row['
 
 $disorders = mysql_query("SELECT * FROM disorder, hasdisorder WHERE hasdisorder.DID = disorder.DID AND hasdisorder.SID=".$row['SID']."" );
 
-$victims = mysql_query("SELECT * FROM victim, kills WHERE victim.VID = kills.DID AND kills.SID=".$row['SID']."" );
+$victims = mysql_query("SELECT * FROM victim, kills WHERE victim.VID = kills.VID AND kills.SID=".$row['SID']."" );
 
 $picture = $row['ImagePath'];
 
@@ -103,9 +103,9 @@ if($row['Gender'] == "M"){
 
 				echo "<h1>" . $row['FName'] . " " . $row['MName'] . " " . $row['LName'] . "</h1>";
 
-				echo "<h2>Alias(es): " . $row['Aliases'] . "</h2>";
+				echo "<h3>Alias(es): " . $row['Aliases'] . "</h3>";
 
-				echo "<h3>Number of Victims: " . $row['NumVictims'] . "</h3>";
+				echo "<h3>Number of Victims: " . $row['NumVictims'] . "</h3><br />";
 				
 				echo "<h4>Category: <a href = '/rootSKDB/category.php?CID=" . $category['CID'] . "'>" . $category['Name'] . "</a></h4>";
 
@@ -160,11 +160,14 @@ if($row['Gender'] == "M"){
 
 			echo "<h3>List of Victims<h3>";
 
-			while($victims = mysql_fetch_array($victims)){
-				echo "<a href = '/rootSKDB/victim.php?VID=" . $victims['VID'] . "'>" . $victims['FName'] . " " . $victims['MName'] . " " . $victims['LName'] . "</a>\n";
+			while($victim = mysql_fetch_array($victims)){
+				echo "<h4><a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
 			}
 
 			?>
+			<br />
+			<br />
+			<br />
 		</div>
 	</div>
 

@@ -38,3 +38,5 @@ webdav/
 
 .metadata/
 mysql/
+htdocs/rootSKDB/.metadata/
+htdocs/rootSKDB/.projects
