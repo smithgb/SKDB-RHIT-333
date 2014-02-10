@@ -81,19 +81,19 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 			<div class="col-md-8">
 				<?php
 
-				echo "<h1>" . $row['FName'] . " " . $row['MName'] . " " . $row['LName'] . "</h1>";
+				echo "<h1>" . $row['FName'] . " " . $row['MName'] . " " . $row['LName'] . "</h1><br />";
 
 				echo "<h4>Age: " . $row['Age'] . "</h3>";
 
-				echo "<h4>Gender: " . $row['Gender'] . "</h3>";
+				echo "<h4>Gender: " . $row['Gender'] . "</h3><br />";
 
-				echo "<h4>Date of Death:" . $row['DateofDeath'] . "</h3>";
+				echo "<h4>Date of Death: " . $row['DateofDeath'] . "</h3>";
 
-				echo "<h4>Location of Murder: " . $location . "</h3>";
+				echo "<h4>Location of Murder: " . $location['City'] . ', ' . $location['State'] . ', '. $location['Country'] . "</h3><br />";
 
-				echo "<h3>Cause of Death" . $row['CauseOfDeath'] . "</h3>";
+				echo "<h3>Cause of Death: " . $row['CauseOfDeath'] . "</h3>";
 
-				echo "<h3>Relation to Killer" . $row['RelationToKiller'] . "</h3>";
+				echo "<h3>Relation to Killer: " . $row['RelationToKiller'] . "</h3>";
 
 				?>
 			</div>
