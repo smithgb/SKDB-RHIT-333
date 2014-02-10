@@ -1,3 +1,17 @@
+<?php
+$MID = $_GET['MID'];
+
+$conn = mysql_connect('localhost', 'skdb333x_grant', 'pyhml249213')or die(mysql_error());
+
+mysql_select_db('skdb333x_skdb') or die(mysql_error());
+
+$result = mysql_query("SELECT * FROM motive WHERE MID=".$MID."" );
+
+$row = mysql_fetch_array($result);
+
+?>
+
+
 <html>
 <head>
 	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
@@ -50,8 +64,20 @@
 		</nav>
 	</div>
 
-	<div>
 
 
 </body>
 </html>
+
+
+<div class = 'container'>
+	<?php
+	echo "<h1>" . $row['Name'] . "</h1><br />";
+
+	echo $row['Description'];
+
+
+
+	mysql_close($conn);
+	?>
+</div>

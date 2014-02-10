@@ -25,6 +25,8 @@ $motive = mysql_fetch_array(mysql_query("SELECT * FROM motive WHERE MID=".$row['
 
 $disorders = mysql_query("SELECT * FROM disorder, hasdisorder WHERE hasdisorder.DID = disorder.DID AND hasdisorder.SID=".$row['SID']."" );
 
+$victims = mysql_query("SELECT * FROM victim, kills WHERE victim.VID = kills.DID AND kills.SID=".$row['SID']."" );
+
 $picture = $row['ImagePath'];
 
 if($row['Gender'] == "M"){
@@ -99,7 +101,7 @@ if($row['Gender'] == "M"){
 
 				echo "<img src= ".$picture." height = 400px><br />";
 
-				echo "<h1>" . $row['FName'] . " " . $row['MName'] . " " . $row['LName'] . "</12>";
+				echo "<h1>" . $row['FName'] . " " . $row['MName'] . " " . $row['LName'] . "</h1>";
 
 				echo "<h2>Alias(es): " . $row['Aliases'] . "</h2>";
 
@@ -153,6 +155,17 @@ if($row['Gender'] == "M"){
 				?>
 			</div>
 		</div>  
+		<div id = 'row'>
+			<?php
+
+			echo "<h3>List of Victims<h3>";
+
+			while($victims = mysql_fetch_array($victims)){
+				echo "<a href = '/rootSKDB/victim.php?VID=" . $victims['VID'] . "'>" . $victims['FName'] . " " . $victims['MName'] . " " . $victims['LName'] . "</a>\n";
+			}
+
+			?>
+		</div>
 	</div>
 
 </body>
