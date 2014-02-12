@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
+	<script type="text/javascript" src='../javascript/jquery.js'></script>
+	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		html { 
+			height: 100%
+		}
+		
+		body { 
+			height: 100%;
+			margin: 0;
+			padding: 0
+		}
+		
+		#map-canvas {
+			height: 60%;
+		}
+	</style>
+	<script type="text/javascript"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf8SJaU3GZGZvFXxrf0sXJsGV-tlWM0N8&sensor=false">
+</script>
+<script type="text/javascript">
+	// function initialize(){
+	// 	var mapOptions = {
+	// 		zoom: 8,
+	// 		center: new google.maps.LatLng(40.507170, -85.529633)
+	// 	}
+	// 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	// 	setMarkers(map, locations);
+	// }
+
+	// var styleArray = [{
+	// 	featureType: "all",
+	// 	rules: [
+	// 		{hue: '#0000b0'},
+	// 		{invert_lightness: 'true'},
+	// 		{saturation: -30}
+	// 	]
+	// }];
+
+	// var locations = [
+	// 	['1234', 39.7684030, -86.1580680, 4],
+	// 	['qwer', 41.0792730, -85.1393513, 5]
+	// ];
+
+	// function setMarkers(map, locations){
+	// 	for (var i = 0; i < locations.length; i++){
+	// 		var l = locations[i];
+	// 		var coord = new google.maps.LatLng(l[1], l[2]);
+	// 		var marker = new google.maps.Marker({
+	// 			position: coord,
+	// 			map: map,
+	// 			title: l[0],
+	// 			zIndex: l[3]
+	// 		});
+	// 	}
+	// }
+
+	function init(){
+		var styles = [
+			{
+				stylers: [
+					{ hue: '#666699' },
+					{ saturation: -20 },
+					{ invert_lightness: 'true' }
+				]
+			},{
+				featureType: 'road',
+				elementType: 'geometry',
+				stylers: [
+					{ lightness: 100 },
+					{ visibility: 'simplified' }
+				]
+			},{
+				featureType: 'road',
+				elementType: 'labels',
+				stylers: [
+					{ visibility: 'off'}
+				]
+			}
+		];
+
+		var styledMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
+
+		var mapOptions = {
+			zoom: 4,
+			center: new google.maps.LatLng(33,-85),
+			mapTypeControlOptions:{
+				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+			}
+		};
+
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+		map.mapTypes.set('map_style', styledMap);
+		map.setMapTypeId('map_style');
+	}
+
+	google.maps.event.addDomListener(window, 'load', init);
+</script>
+</head>
+<body>
+	<!-- website logo -->
+	<img src="images/logo.jpg" alt="SKDB_logo">
+
+	<!-- navbar -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- NAV HEAD -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">SKDB</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Killers <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/rootSKDB/azlist.php">A-Z List</a></li>
+							<li><a href="#">Year by Year</a></li>
+						</ul>
+					</li>
+					<li><a href="map.html">Map</a></li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">
+						Submit
+					</button>
+				</form>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="map-canvas"/>
+</body>
+</html>
