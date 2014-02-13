@@ -23,82 +23,45 @@
 	<script type="text/javascript"
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf8SJaU3GZGZvFXxrf0sXJsGV-tlWM0N8&sensor=false">
 </script>
-<script type="text/javascript">
-	// function initialize(){
-	// 	var mapOptions = {
-	// 		zoom: 8,
-	// 		center: new google.maps.LatLng(40.507170, -85.529633)
-	// 	}
-	// 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+<script>
 
-	// 	setMarkers(map, locations);
-	// }
+	function init() {
+	  var mapOptions = {
+	    zoom: 10,
+	    center: new google.maps.LatLng(-33.9, 151.2),
+	    mapTypeId: google.maps.MapTypeId.HYBRID
+	  };
 
-	// var styleArray = [{
-	// 	featureType: "all",
-	// 	rules: [
-	// 		{hue: '#0000b0'},
-	// 		{invert_lightness: 'true'},
-	// 		{saturation: -30}
-	// 	]
-	// }];
+	  var map = new google.maps.Map(document.getElementById('map-canvas'),
+	                                mapOptions);
 
-	// var locations = [
-	// 	['1234', 39.7684030, -86.1580680, 4],
-	// 	['qwer', 41.0792730, -85.1393513, 5]
-	// ];
+	  setMarkers(map, beaches);
+	}
 
-	// function setMarkers(map, locations){
-	// 	for (var i = 0; i < locations.length; i++){
-	// 		var l = locations[i];
-	// 		var coord = new google.maps.LatLng(l[1], l[2]);
-	// 		var marker = new google.maps.Marker({
-	// 			position: coord,
-	// 			map: map,
-	// 			title: l[0],
-	// 			zIndex: l[3]
-	// 		});
-	// 	}
-	// }
+	var beaches = [
+	  ['Bondi Beach', -33.890542, 151.274856, 4],
+	  ['Coogee Beach', -33.923036, 151.259052, 5],
+	  ['Cronulla Beach', -34.028249, 151.157507, 3],
+	  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+	  ['Maroubra Beach', -33.950198, 151.259302, 1]
+	];
 
-	function init(){
-		var styles = [
-			{
-				stylers: [
-					{ hue: '#666699' },
-					{ saturation: -20 },
-					{ invert_lightness: 'true' }
-				]
-			},{
-				featureType: 'road',
-				elementType: 'geometry',
-				stylers: [
-					{ lightness: 100 },
-					{ visibility: 'simplified' }
-				]
-			},{
-				featureType: 'road',
-				elementType: 'labels',
-				stylers: [
-					{ visibility: 'off'}
-				]
-			}
-		];
+	function setMarkers(map, locations) {
+	  // Add markers to the map
 
-		var styledMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
-
-		var mapOptions = {
-			zoom: 4,
-			center: new google.maps.LatLng(33,-85),
-			mapTypeControlOptions:{
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-			}
-		};
-
-		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-		map.mapTypes.set('map_style', styledMap);
-		map.setMapTypeId('map_style');
+	  // Marker sizes are expressed as a Size of X,Y
+	  // where the origin of the image (0,0) is located
+	  // in the top left of the image.
+	  for (var i = 0; i < locations.length; i++) {
+	    var beach = locations[i];
+	    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+	    var marker = new google.maps.Marker({
+	        position: myLatLng,
+	        map: map,
+	        title: beach[0],
+	        zIndex: beach[3]
+	    });
+	  }
 	}
 
 	google.maps.event.addDomListener(window, 'load', init);
@@ -139,6 +102,6 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
-	<div id="map-canvas"/>
+    <div id="map-canvas"></div>
 </body>
 </html>
