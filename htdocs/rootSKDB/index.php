@@ -10,5 +10,19 @@
 
 	<?php require("navbar.html"); ?>
 
+	<?php
+
+	$minRand = 0;
+	$maxRand = 11;
+
+	$skotdIndex = 7;
+
+	while($skotdIndex == 7){
+		srand(date("ymd"));
+		$skotdIndex = rand($minRand, $maxRand);
+	}
+	
+	?>
+
 </body>
 </html>

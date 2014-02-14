@@ -94,7 +94,11 @@ if($row['Gender'] == "M"){
 
 				echo "<h4>Died: " . $row['Died'] . "</h4><br />";
 
-				
+				echo "<h3>List of Victims<h3>";
+
+				while($victim = mysql_fetch_array($victims)){
+					echo "<a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'><h4>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
+				}				
 
 				?>
 			</div>  
@@ -103,24 +107,8 @@ if($row['Gender'] == "M"){
 
 				echo "<p>" . $row['Biography'] . "<p>";
 
-
-
 				?>
 			</div>
-		</div>  
-		<div id = 'row'>
-			<?php
-
-			echo "<h3>List of Victims<h3>";
-
-			while($victim = mysql_fetch_array($victims)){
-				echo "<a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'><h4>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
-			}
-
-			?>
-			<br />
-			<br />
-			<br />
 		</div>
 	</div>
 
