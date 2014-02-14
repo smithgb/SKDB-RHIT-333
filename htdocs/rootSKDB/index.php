@@ -21,7 +21,7 @@
 
 	mysql_select_db('skdb') or die(mysql_error());
 
-	$skotdResult = mysql_query("SELECT FName, MName, LName, NumVictims, ImagePath FROM serialkiller WHERE SID = " . $skotdID);
+	$skotdResult = mysql_query("SELECT SID, FName, MName, LName, NumVictims, ImagePath FROM serialkiller WHERE SID = " . $skotdID);
 
 	$row = mysql_fetch_array($skotdResult);
 
@@ -40,7 +40,8 @@
 
 		echo '<h2>Serial Killer of the Day</h2>';
 
-		echo '<img src = ' . $picture . ' height = 280px><br />';
+		echo '<a href="killer.php?SID=' . $row['SID'] . '" >';
+		echo '<img src = ' . $picture . ' class="img-circle img-thumbnail" /></a><br />';
 	
 		echo '<h3>' . $row['FName'] . ' ' . $row['MName'] . ' ' . $row['LName'] . '</h3>';
 	
