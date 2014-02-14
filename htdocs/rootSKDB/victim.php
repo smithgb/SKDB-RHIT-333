@@ -24,10 +24,15 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 	<title>SKDB</title>
 </head>
 <body>
-	<div>
+
+	<script type="text/javascript">$('#navbar').load('navbar.html');</script>
+
+	<div id = 'navbar'>
+
 		<!-- website logo -->
 		<img src="images/logo.jpg" alt="SKDB_logo">
 
+	
 		<!-- navbar -->
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
@@ -39,7 +44,7 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">SKDB</a>
+					<a class="navbar-brand" href="/rootSKDB/index.html">SKDB</a>
 				</div>
 
 
@@ -50,10 +55,9 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Killers <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="/rootSKDB/azlist.php">A-Z List</a></li>
-								<li><a href="#">Year by Year</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Map</a></li>
+						<li><a href="/rootSKDB/map.html">Map</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
@@ -67,8 +71,9 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 			</div><!-- /.container-fluid -->
 		</nav>
 	</div>
+	
 
-<div class="container">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
 				<?php

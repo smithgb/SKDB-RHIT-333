@@ -19,11 +19,17 @@ $row = mysql_fetch_array($result);
 	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
 	<title>SKDB</title>
 </head>
+
 <body>
-	<div>
+	
+	<script type="text/javascript">$('#navbar').load('navbar.html');</script>
+
+	<div id = 'navbar'>
+
 		<!-- website logo -->
 		<img src="images/logo.jpg" alt="SKDB_logo">
 
+	
 		<!-- navbar -->
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
@@ -35,7 +41,7 @@ $row = mysql_fetch_array($result);
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">SKDB</a>
+					<a class="navbar-brand" href="/rootSKDB/index.html">SKDB</a>
 				</div>
 
 
@@ -46,10 +52,9 @@ $row = mysql_fetch_array($result);
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Killers <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="/rootSKDB/azlist.php">A-Z List</a></li>
-								<li><a href="#">Year by Year</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Map</a></li>
+						<li><a href="/rootSKDB/map.html">Map</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
@@ -64,13 +69,7 @@ $row = mysql_fetch_array($result);
 		</nav>
 	</div>
 
-
-
-</body>
-</html>
-
-
-<div class = 'container'>
+	<div class = 'container'>
 	<?php
 	echo "<h1>" . $row['Name'] . "</h1><br />";
 
@@ -80,4 +79,10 @@ $row = mysql_fetch_array($result);
 
 	mysql_close($conn);
 	?>
-</div>
+	</div>
+
+
+</body>
+</html>
+
+

@@ -41,13 +41,18 @@ if($row['Gender'] == "M"){
 	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
 	<script type="text/javascript" src='../javascript/jquery.js'></script>
 	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
-	<?php echo '<title>' . $row['FName']. ' ' . $row['LName'] .'</title>'?>
+	<title>SKDB</title>
 </head>
 <body>
-	<div>
+	
+	<script type="text/javascript">$('#navbar').load('navbar.html');</script>
+
+	<div id = 'navbar'>
+
 		<!-- website logo -->
 		<img src="images/logo.jpg" alt="SKDB_logo">
 
+	
 		<!-- navbar -->
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
@@ -59,7 +64,7 @@ if($row['Gender'] == "M"){
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">SKDB</a>
+					<a class="navbar-brand" href="/rootSKDB/index.html">SKDB</a>
 				</div>
 
 
@@ -70,10 +75,9 @@ if($row['Gender'] == "M"){
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Killers <b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="/rootSKDB/azlist.php">A-Z List</a></li>
-								<li><a href="#">Year by Year</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Map</a></li>
+						<li><a href="/rootSKDB/map.html">Map</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
@@ -87,10 +91,6 @@ if($row['Gender'] == "M"){
 			</div><!-- /.container-fluid -->
 		</nav>
 	</div>
-
-
-
-<!-- Not making columns like I wanted -->
 
 	<div class="container">
 		<div class="row">
@@ -171,6 +171,9 @@ if($row['Gender'] == "M"){
 
 </body>
 </html>
+
+
+	
 
 
 
