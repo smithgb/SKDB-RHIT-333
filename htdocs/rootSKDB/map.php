@@ -24,18 +24,36 @@
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf8SJaU3GZGZvFXxrf0sXJsGV-tlWM0N8&sensor=false">
 </script>
 <script>
+	var murderLocations = new Array();
+
+	function getMapData(){
+		$.get('phpUtils/getmurders.php')
+		.done(function(returnData){
+			alert(returnData);
+			saveReturnData(JSON.parse(returnData));
+			init();
+		});
+	}
+
+	function saveReturnData(input){
+		alert(input.length);
+		for(var i = 0; i < input.length; i++){
+			murderLocations[i] = ['test',input[i]['Latitude'],input[i]['Longitude'],i+1];
+		}
+	}
 
 	function init() {
-	  var mapOptions = {
-	    zoom: 10,
-	    center: new google.maps.LatLng(-33.9, 151.2),
-	    mapTypeId: google.maps.MapTypeId.HYBRID
-	  };
+		var mapCenter = new google.maps.LatLng(39.390200,-97.539063);
+		var mapOptions = {
+		zoom: 4,
+		center: mapCenter,
+		mapTypeId: google.maps.MapTypeId.HYBRID
+		};
 
-	  var map = new google.maps.Map(document.getElementById('map-canvas'),
-	                                mapOptions);
+		var map = new google.maps.Map(document.getElementById('map-canvas'),
+		                            mapOptions);
 
-	  setMarkers(map, beaches);
+		setMarkers(map, murderLocations);
 	}
 
 	var beaches = [
@@ -47,24 +65,20 @@
 	];
 
 	function setMarkers(map, locations) {
-	  // Add markers to the map
-
-	  // Marker sizes are expressed as a Size of X,Y
-	  // where the origin of the image (0,0) is located
-	  // in the top left of the image.
+		alert(locations.length);
 	  for (var i = 0; i < locations.length; i++) {
-	    var beach = locations[i];
-	    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+	    var coordinate = locations[i];
+	    var myLatLng = new google.maps.LatLng(coordinate[1], coordinate[2]);
 	    var marker = new google.maps.Marker({
 	        position: myLatLng,
 	        map: map,
-	        title: beach[0],
-	        zIndex: beach[3]
+	        title: coordinate[0],
+	        zIndex: coordinate[3]
 	    });
 	  }
 	}
 
-	google.maps.event.addDomListener(window, 'load', init);
+	google.maps.event.addDomListener(window, 'load', getMapData);
 </script>
 </head>
 <body>
