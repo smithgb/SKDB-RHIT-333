@@ -29,16 +29,14 @@
 	function getMapData(){
 		$.get('phpUtils/getmurders.php')
 		.done(function(returnData){
-			alert(returnData);
 			saveReturnData(JSON.parse(returnData));
 			init();
 		});
 	}
 
 	function saveReturnData(input){
-		alert(input.length);
 		for(var i = 0; i < input.length; i++){
-			murderLocations[i] = ['test',input[i]['Latitude'],input[i]['Longitude'],i+1];
+			murderLocations[i] = ['',input[i]['Latitude'],input[i]['Longitude'],i+1];
 		}
 	}
 
@@ -65,14 +63,12 @@
 	];
 
 	function setMarkers(map, locations) {
-		alert(locations.length);
 	  for (var i = 0; i < locations.length; i++) {
 	    var coordinate = locations[i];
 	    var myLatLng = new google.maps.LatLng(coordinate[1], coordinate[2]);
 	    var marker = new google.maps.Marker({
 	        position: myLatLng,
 	        map: map,
-	        title: coordinate[0],
 	        zIndex: coordinate[3]
 	    });
 	  }
