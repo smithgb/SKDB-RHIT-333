@@ -86,10 +86,5 @@
 	<?php require("navbar.html"); ?>
 
 	<div id="map-canvas"/>
-				</form>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
-    <div id="map-canvas"></div>
 </body>
 </html>
