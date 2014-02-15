@@ -16,9 +16,7 @@ $row = mysql_fetch_array($result);
 
 <html>
 <head>
-	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
-	<script type="text/javascript" src='../javascript/jquery.js'></script>
-	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
+	<?php require('bootstrapTheme.html') ?>
 	<title>SKDB</title>
 </head>
 <body>

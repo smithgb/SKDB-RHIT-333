@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
-	<script type="text/javascript" src='../javascript/jquery.js'></script>
-	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
+	<?php require('bootstrapTheme.html') ?>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<style type="text/css">
 		html { 
