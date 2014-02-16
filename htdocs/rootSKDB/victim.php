@@ -9,7 +9,11 @@ $result = mysql_query("SELECT * FROM victim WHERE VID=".$VID."" );
 
 $row = mysql_fetch_array($result);
 
-$picture = $row['ImagePath'];
+if ($row['ImagePath'] == null){
+	$picture = 'images/default.jpg';
+}else{
+	$picture = $row['ImagePath'];
+}
 
 $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=".$row['LocationofMurder']."" ));
 
