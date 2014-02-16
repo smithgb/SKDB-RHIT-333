@@ -1,2 +1,2 @@
-<?php require('bootstrapTheme.html') ?>
-<?php require("navbar.html"); ?>
+<?php require('partials/bootstrapTheme.html') ?>
+<?php require("partials/navbar.html"); ?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require('bootstrapTheme.html') ?>
+	<?php require('partials/bootstrapTheme.html') ?>
 	<title>SKDB</title>
 	<?php
 
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-	<?php require("navbar.html"); ?>
+	<?php require("partials/navbar.html"); ?>
 
 	<?php
 		echo '<div style="margin-left: 1%; margin-right: auto;">';

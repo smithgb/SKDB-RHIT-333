@@ -38,12 +38,12 @@ if($row['Gender'] == "M"){
 
 <html>
 <head>
-	<?php require('bootstrapTheme.html') ?>
+	<?php require('partials/bootstrapTheme.html') ?>
 	<title>SKDB</title>
 </head>
 <body>
 	
-	<?php require("navbar.html"); ?>
+	<?php require("partials/navbar.html"); ?>
 
 	<div class="container">
 		<div class="row">
