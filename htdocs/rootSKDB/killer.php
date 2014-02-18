@@ -38,14 +38,12 @@ if($row['Gender'] == "M"){
 
 <html>
 <head>
-	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
-	<script type="text/javascript" src='../javascript/jquery.js'></script>
-	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
+	<?php require('partials/bootstrapTheme.html') ?>
 	<title>SKDB</title>
 </head>
 <body>
 	
-	<?php require("navbar.html"); ?>
+	<?php require("partials/navbar.html"); ?>
 
 	<div class="container">
 		<div class="row">
@@ -94,7 +92,11 @@ if($row['Gender'] == "M"){
 
 				echo "<h4>Died: " . $row['Died'] . "</h4><br />";
 
-				
+				echo "<h3>List of Victims<h3>";
+
+				while($victim = mysql_fetch_array($victims)){
+					echo "<a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'><h4>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
+				}				
 
 				?>
 			</div>  
@@ -103,24 +105,8 @@ if($row['Gender'] == "M"){
 
 				echo "<p>" . $row['Biography'] . "<p>";
 
-
-
 				?>
 			</div>
-		</div>  
-		<div id = 'row'>
-			<?php
-
-			echo "<h3>List of Victims<h3>";
-
-			while($victim = mysql_fetch_array($victims)){
-				echo "<a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'><h4>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
-			}
-
-			?>
-			<br />
-			<br />
-			<br />
 		</div>
 	</div>
 

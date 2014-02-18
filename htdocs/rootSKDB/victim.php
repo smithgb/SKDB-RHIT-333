@@ -9,7 +9,11 @@ $result = mysql_query("SELECT * FROM victim WHERE VID=".$VID."" );
 
 $row = mysql_fetch_array($result);
 
-$picture = $row['ImagePath'];
+if ($row['ImagePath'] == null){
+	$picture = 'images/default.jpg';
+}else{
+	$picture = $row['ImagePath'];
+}
 
 $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=".$row['LocationofMurder']."" ));
 
@@ -18,14 +22,12 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 
 <html>
 <head>
-	<link type = "text/css" rel = "stylesheet" href="../stylesheets/bootstrap.css" />
-	<script type="text/javascript" src='../javascript/jquery.js'></script>
-	<script type= 'text/javascript' src="../javascript/bootstrap.js"></script>
+	<?php require('partials/bootstrapTheme.html') ?>
 	<title>SKDB</title>
 </head>
 <body>
 
-	<?php require("navbar.html"); ?>
+	<?php require("partials/navbar.html"); ?>
 	
 
 	<div class="container">
