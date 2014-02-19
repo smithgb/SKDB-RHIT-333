@@ -1,23 +1,18 @@
-<!-- 
-zip
-latitude
-longitude
- -->
 <br />
 <form method="POST" action="phpUtils/contribute/createLocation.php" role='form' style="margin-left: 1%; margin-right: auto;">
 	<!-- ROW -->
 	<div class="row">
 		<div class="form-group col-md-2">
-			<input name='city' type='text' class="form-control" id='city' placeholder='City' />
+			<input name='city' type='text' class="form-control" id='city' placeholder='City' required />
 		</div>
 		<div class="form-group col-md-2">
-			<input name="state" type='text' class="form-control" id='state' placeholder='State/Province' />
+			<input name="state" type='text' class="form-control" id='state' placeholder='State/Province' required />
 		</div>
 		<div class="form-group col-md-4">
-			<input name="country" type='text' class="form-control" id='country' placeholder='Country' />
+			<input name="country" type='text' class="form-control" id='country' placeholder='Country' required />
 		</div>
 		<div class="col-md-2">
-			<input name="zip" type='text' class="form-control" placeholder='Zipcode/Postalcode' />
+			<input name="zip" type='text' class="form-control" placeholder='Zipcode/Postalcode' required />
 		</div>
 	</div>
 	<!-- ROW -->
