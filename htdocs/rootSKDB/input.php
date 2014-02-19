@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<?php require('partials/bootstrapTheme.html') ?>
