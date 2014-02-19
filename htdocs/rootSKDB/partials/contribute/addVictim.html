@@ -1,0 +1,68 @@
+<br />
+<form method="POST" action="phpUtils/contribute/createSK.php" role='form' style="margin-left: 1%; margin-right: auto;">
+	<!-- ROW -->
+	<div class="row">
+		<div class="form-group col-md-2">
+			<input name='fname' type='text' class="form-control" id='fname' placeholder='First Name' />
+		</div>
+		<div class="form-group col-md-2">
+			<input name="mname" type='text' class="form-control" id='mname' placeholder='Middle Name' />
+		</div>
+		<div class="form-group col-md-2">
+			<input name="lname" type='text' class="form-control" id='lname' placeholder='Last Name' />
+		</div>
+	</div>
+
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-2">
+			<select name="gender" id="gender" class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</div>
+		<div class="col-md-1">
+			<input name="age" type='text' class="form-control" placeholder='Age' />
+			<span class='help-block'>Please use a number not word.</span>
+		</div>
+		<div class="col-md-2">
+			<input name="dateofdeath" type='text' class="form-control" placeholder='YYYY-MM-DD' />
+		</div>
+	</div>
+
+	<!-- ROW -->
+	<div class='row'>
+		<div class="col-md-2">
+			<label>Serial Killer</label>
+			<select name="serialkiller" id="serialkiller" class="form-control">
+				<!-- php script needed -->
+				<option>Me</option>
+				<option>You</option>
+			</select>
+		</div>
+
+		<div class="col-md-2">
+			<label>Location of Death</label>
+			<select name="deathloc" id="deathloc" class="form-control">
+				<!-- php script needed -->
+				<option>12345</option>
+				<option>54321</option>
+			</select>
+		</div>
+
+		<div class="col-md-3">
+			<label>Relation to Killer</label>
+			<input name="relation" type='text' class="form-control" />
+		</div>
+
+		<div class="col-md-3">
+			<label>Cause of Death</label>
+			<input name="cause" type='text' class="form-control" />
+		</div>
+
+	</div>
+
+	<!-- upload image text -->
+
+		<input type="submit" class="btn btn-success" value="Submit" />
+</form>
