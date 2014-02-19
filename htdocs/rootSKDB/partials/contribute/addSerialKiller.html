@@ -1,0 +1,106 @@
+<br />
+<form method="POST" action="phpUtils/contribute/createSK.php" role='form' style="margin-left: 1%; margin-right: auto;">
+	<!-- ROW -->
+	<div class="row">
+		<div class="form-group col-md-2">
+			<input name='fname' type='text' class="form-control" id='fname' placeholder='First Name' />
+		</div>
+		<div class="form-group col-md-2">
+			<input name="mname" type='text' class="form-control" id='mname' placeholder='Middle Name' />
+		</div>
+		<div class="form-group col-md-2">
+			<input name="lname" type='text' class="form-control" id='lname' placeholder='Last Name' />
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-5">
+			<input name="aliases" type='text' class="form-control" placeholder='Aliases' />
+			<span class='help-block'>Separate multiple aliases by commas.</span>
+		</div>
+		<div class="col-md-2">
+			<select name="gender" id="gender" class="form-control">
+				<option value="M">Male</option>
+				<option value="F">Female</option>
+			</select>
+		</div>
+		<div class="col-md-2">
+			<input name="numvictims" type='text' class="form-control" placeholder='Number of Victims' />
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-4">
+			<label>Birth Date</label>
+			<input name="birth" type="text" class="form-control" placeholder='MM/DD/YYYY' />
+		</div>
+		<div class="col-md-3">
+			<label>Birthplace Zipcode</label>
+			<select name="birthzip" id="birthzip" class="form-control">
+				<!-- php script needed -->
+				<option>12345</option>
+				<option>54321</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<label>Lived Zipcode</label>
+			<select name="livezip" id="livezip" class="form-control">
+				<!-- php script needed -->
+				<option>12345</option>
+				<option>54321</option>					
+			</select>
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-2">
+			<label> </label>
+			<input name="yrsactive" type='text' class="form-control" placeholder='Years of Activity' />
+		</div>
+		<div class="col-md-3">
+			<label>Category</label>
+			<select name="cat" id="cat" class="form-control">
+				<!-- php script needed -->
+				<option>stupid</option>
+				<option>full of shit</option>					
+				<option>fuckin' nuts</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<label>Motive</label>
+			<select name="motive" id="motive" class="form-control">
+				<!-- php script needed -->
+				<option>voldemort made me do it</option>
+				<option>god told me to do it</option>
+			</select>
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-4">
+			<label>Arrest Date</label>
+			<input name="arrest" type="text" class="form-control" placeholder='MM/DD/YYYY' />
+		</div>
+		<div class="col-md-3">
+			<label>Punishment</label>
+			<input name="punishment" type='text' class="form-control" />
+		</div>
+		<div class="col-md-4">
+			<label>Death Date</label>
+			<input name="death" type="text" class="form-control" placeholder='MM/DD/YYYY' />
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div class="col-md-6">
+			<label>Biography</label>
+			<textarea name="bio" class="form-control" rows='4'></textarea>
+		</div>
+	</div>
+	<!-- ROW -->
+	<div class="row">
+		<div>
+			<!-- SAVE PROFILE IMAGE FOR A BONUS FEATURE -->
+		</div>
+	</div>
+</form>

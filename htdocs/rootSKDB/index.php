@@ -39,7 +39,7 @@
 		echo '<h2>Serial Killer of the Day</h2>';
 
 		echo '<a href="killer.php?SID=' . $row['SID'] . '" >';
-		echo '<img src = ' . $picture . ' class="img-circle img-thumbnail" /></a><br />';
+		echo '<img src = ' . $picture . ' class="img-circle img-thumbnail" style="height: 22em" /></a><br />';
 	
 		echo '<h3>' . $row['FName'] . ' ' . $row['MName'] . ' ' . $row['LName'] . '</h3>';
 	
