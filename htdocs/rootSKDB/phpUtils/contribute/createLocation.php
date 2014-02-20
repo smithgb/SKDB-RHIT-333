@@ -17,7 +17,7 @@
 		$latitude = (empty($_POST['lat']) == true ? 0 : (is_float($_POST['lat']) == true ? $_POST['lat'] : 0));
 		$longitude = (empty($_POST['long']) == true ? 0 : (is_float($_POST['long']) == true ? $_POST['long'] : 0));
 
-		mysql_select_db('skdb') or die(mysql_error());
+		mysqli_select_db($conn,'skdb') or die(mysql_error());
 
 		mysqli_query($conn, "CALL createLocation('" . $country . "','" . $state . "','" . $city . "','" . $zip . "','" . $latitude . "','" . $longitude . "')");
 	}
