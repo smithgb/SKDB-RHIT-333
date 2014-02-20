@@ -20,7 +20,6 @@
 		mysql_select_db('skdb') or die(mysql_error());
 
 		mysqli_query($conn, "CALL createLocation('" . $country . "','" . $state . "','" . $city . "','" . $zip . "','" . $latitude . "','" . $longitude . "')");
-
 	}
 
 	header('Location: ../../index.php');
