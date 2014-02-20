@@ -13,7 +13,7 @@ $birthplace = mysql_query("SELECT * FROM location WHERE Zipcode=".$row['Birthpla
 
 $bp = mysql_fetch_array($birthplace);
 
-$lived = mysql_query("SELECT * FROM location WHERE Zipcode=".$row['Lived']."" );
+$lived =mysql_query("SELECT * FROM location WHERE Zipcode=".$row['Lived']."" );
 
 $live = mysql_fetch_array($lived);
 
@@ -92,7 +92,7 @@ if($row['Gender'] == "M"){
 
 				echo "<h4>Died: " . $row['Died'] . "</h4><br />";
 
-				echo "<h3>List of Victims<h3>";
+				echo "<h3>List of Known Victims<h3>";
 
 				while($victim = mysql_fetch_array($victims)){
 					echo "<a href = '/rootSKDB/victim.php?VID=" . $victim['VID'] . "'><h4>" . $victim['FName'] . " " . $victim['MName'] . " " . $victim['LName'] . "</a></h4>\n";
@@ -107,6 +107,8 @@ if($row['Gender'] == "M"){
 
 				?>
 			</div>
+			<br />
+			<br />
 		</div>
 	</div>
 

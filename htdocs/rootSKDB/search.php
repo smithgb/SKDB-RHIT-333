@@ -23,7 +23,7 @@ if(isset($_POST['keyword'])){
  if(mysqli_affected_rows($link)!=0){
  while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
  	$site = '<a class="meterRow" href="killer.php?SID=' . $row['SID'] .'">';
- echo '<span>'.$site.$row['FName'].' '.'<span>'.$row['LName'].'</a></span></span>';
+ echo '<span>'.$site.$row['FName'].' '.'<span>'.$row['LName'].'</a></span></span><br />';
  }
  }else {
  echo 'No Results for :"'.$_POST['keyword'].'"';
