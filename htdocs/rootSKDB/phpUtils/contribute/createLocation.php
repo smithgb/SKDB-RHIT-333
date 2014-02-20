@@ -21,8 +21,7 @@
 
 		mysqli_query($conn, "CALL createLocation('" . $country . "','" . $state . "','" . $city . "','" . $zip . "','" . $latitude . "','" . $longitude . "')");
 
-		header('Location: ../../input.php');
-	}else{
-		header('Location: index.php');
 	}
+
+	header('Location: ../../index.php');
 ?>
