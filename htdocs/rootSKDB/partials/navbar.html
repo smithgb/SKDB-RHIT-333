@@ -1,33 +1,33 @@
 <!-- JAVASCRIPT FOR SEARCH BAR -->
 <script>
-$(document).ready(function() {
+	$(document).ready(function() {
 	//$("#search_input").watermark("Begin Typing to Search");
-     $("#search_input").keyup(function(){
-         var search_input = $(this).val();
-         var dataString = 'keyword='+ search_input;
-         if(search_input.length<=0){
-             $("#searchresultdata").remove();
-         }else{
-             if ( $("#searchresultdata").length ==0 ) {
-                 $('<div id="searchresultdata" class="srch-results"></div>').appendTo('.srch-content');
-             }
+	$("#search_input").keyup(function(){
+		var search_input = $(this).val();
+		var dataString = 'keyword='+ search_input;
+		if(search_input.length<=0){
+			$("#searchresultdata").remove();
+		}else{
+			if ( $("#searchresultdata").length ==0 ) {
+				$('<div id="searchresultdata" class="srch-results"></div>').appendTo('.srch-content');
+			}
             //AJAX POST
             $.ajax({
-                 type: "POST",
-                 url: "search.php",
-                 data: dataString,
-                 beforeSend: function() {
-                    $('input#search_input').addClass('loading');
-                 },
-                success: function(response){
-                     $('#searchresultdata').html(response).show();
-                     if ($('input#search_input').hasClass("loading")) {
-                         $("input#search_input").removeClass("loading");
-                     }
-                 }
-             });
-         }
-     });
+            	type: "POST",
+            	url: "search.php",
+            	data: dataString,
+            	beforeSend: function() {
+            		$('input#search_input').addClass('loading');
+            	},
+            	success: function(response){
+            		$('#searchresultdata').html(response).show();
+            		if ($('input#search_input').hasClass("loading")) {
+            			$("input#search_input").removeClass("loading");
+            		}
+            	}
+            });
+        }
+    });
 });
 </script>
 
@@ -72,25 +72,36 @@ $(document).ready(function() {
 							</li>
 						</ul>
 					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn More<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="azdisorder.php">Disorders</a></li>
+							<li><a href="azmotive.php">Motives</a></li>
+							<li><a href="azcategory.php">Categories</a></li>
+						</ul>
+					</li>
+
 					<li><a href="adminLogin.php">Contribute</a></li>
+
 					<li><a href="disclaimer.php">Disclaimer</a></li>
+					
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
 					<div class="search_widget">
-     				<div class="clearfix"> </div>
-     				<div class="srch">
-         			<div id="srch-content">
-             		<div class="search-content">
-                 	<div class="searchinputbox">
-                     <!-- The Searchbox Starts Here -->
-                     <input name="query" type="text" id="search_input" placeholder="Begin Typing to Search">
-                     <!-- The Searchbox Ends Here -->
-                 </div>
-                 <div id="searchresultdata" class="srch-results"> </div>
-             </div>
-         </div>
-     </div>
-</div>
+						<div class="clearfix"> </div>
+						<div class="srch">
+							<div id="srch-content">
+								<div class="search-content">
+									<div class="searchinputbox">
+										<!-- The Searchbox Starts Here -->
+										<input name="query" class = 'form-control' type="text" id="search_input" placeholder="Search Killers">
+										<!-- The Searchbox Ends Here -->
+									</div>
+									<div id="searchresultdata" class="srch-results"> </div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<!--<div class="form-group">
 						<input type="text" class="form-control" placeholder="Search">
@@ -99,10 +110,10 @@ $(document).ready(function() {
 						Submit
 					</button>
 				-->
-				</form>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+			</form>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
 </div>
 
 
