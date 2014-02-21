@@ -24,22 +24,6 @@
 		<li>
 			<a href="#locpane" data-toggle="pill">Location</a>
 		</li>
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle='dropdown'>
-				Edit <b class='caret'></b>
-			</a>
-			<ul class="dropdown-menu">
-				<li>
-					<a href="#editsk" data-toggle='pill'>Serial Killer</a>
-				</li>
-				<li>
-					<a href="#editv" data-toggle='pill'>Victim</a>
-				</li>
-				<li>
-					<a href="#editloc" data-toggle='pill'>Location</a>
-				</li>
-			</ul>
-		</li>
 	</ul>
 
 	<!-- pill panes -->
