@@ -35,7 +35,7 @@ $location = mysql_fetch_array(mysql_query("SELECT * FROM location WHERE Zipcode=
 			<div class="col-md-4">
 				<?php
 
-				echo "<img src= ".$picture." height = 400px><br />";
+				echo "<img src= ".$picture." height = 400px width = 350px><br />";
 				
 
 				?>
