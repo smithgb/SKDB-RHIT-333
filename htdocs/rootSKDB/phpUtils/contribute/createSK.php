@@ -36,7 +36,7 @@
 			$arrestdate = mysqli_real_escape_string($conn, $_POST['arrestdate']);
 			$deathdate = mysqli_real_escape_string($conn, $_POST['deathdate']);
 			
-		$img = "images/default.jpg";
+		$img = mysqli_real_escape_string($conn, $_POST['img']);
 
 		mysql_select_db('skdb') or die(mysql_error());
 

@@ -35,19 +35,35 @@
 			<input name="birth" type="text" class="form-control" id = 'birthdate' placeholder='YYYY-MM-DD' />
 		</div>
 		<div class="col-md-3">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT City, State, Zipcode FROM location"; 
+			$result = mysql_query($query); ?>
 			<label>Birthplace Zipcode</label>
 			<select name="birthzip" id="birthzip" class="form-control">
-				<!-- php script needed -->
-				<option>12345</option>
-				<option>54321</option>
+			<?php 
+			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
+			?> 
+			<option value="<?php echo $line['Zipcode'];?>"> 
+			<?php echo $line['City'].', '.$line['State'];?> </option>   
+			<?php } ?> 
 			</select>
 		</div>
 		<div class="col-md-3">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT City, State, Zipcode FROM location"; 
+			$result = mysql_query($query); ?>
 			<label>Lived Zipcode</label>
 			<select name="livezip" id="livezip" class="form-control">
-				<!-- php script needed -->
-				<option>12345</option>
-				<option>54321</option>					
+			<?php 
+			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
+			?> 
+			<option value="<?php echo $line['Zipcode'];?>"> 
+			<?php echo $line['City'].', '.$line['State'];?> </option>   
+			<?php } ?> 
 			</select>
 		</div>
 	</div>
@@ -58,20 +74,35 @@
 			<input name="yrsactive" type='text' class="form-control" id = 'yrsactive' placeholder='Years of Activity' />
 		</div>
 		<div class="col-md-3">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT Name, CID FROM category"; 
+			$result = mysql_query($query); ?>
 			<label>Category</label>
 			<select name="cat" id="cat" class="form-control">
-				<!-- php script needed -->
-				<option>stupid</option>
-				<option>full of shit</option>					
-				<option>fuckin' nuts</option>
+			<?php 
+			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
+			?> 
+			<option value="<?php echo $line['CID'];?>"> 
+			<?php echo $line['Name'];?> </option>   
+			<?php } ?> 
 			</select>
 		</div>
 		<div class="col-md-3">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT Name, MID FROM motive"; 
+			$result = mysql_query($query); ?>
 			<label>Motive</label>
 			<select name="motive" id="motive" class="form-control">
-				<!-- php script needed -->
-				<option>voldemort made me do it</option>
-				<option>god told me to do it</option>
+			<?php 
+			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
+			?> 
+			<option value="<?php echo $line['MID'];?>"> 
+			<?php echo $line['Name'];?> </option>   
+			<?php } ?> 
 			</select>
 		</div>
 	</div>
@@ -95,6 +126,11 @@
 		<div class="col-md-6">
 			<label>Biography</label>
 			<textarea name="bio" class="form-control" rows='4' id = 'bio'></textarea>
+		</div>
+		<div class="col-md-4">
+			<!-- SAVE PROFILE IMAGE FOR A BONUS FEATURE -->
+			<label>Image Path</label>
+			<textarea name="img" class="form-control" rows='1' id = 'img'></textarea>
 		</div>
 	</div>
 	<!-- ROW -->
