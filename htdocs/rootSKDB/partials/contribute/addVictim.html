@@ -33,18 +33,19 @@
 	<!-- ROW -->
 	<div class='row'>
 		<div class="col-md-2">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT FName,MName,LName FROM serialkiller"; 
+			$result = mysql_query($query); ?>
 			<label>Serial Killer</label>
 			<select name="serialkiller" id="serialkiller" class="form-control">
-				<!-- php script needed -->
-				<option>Me</option>
-				<option>You</option>
+				
 			</select>
 		</div>
 
 		<div class="col-md-2">
-			<?php 
-			mysql_connect('localhost','root','') or die(mysql_error());
-			mysql_select_db("skdb")or die("Connection Failed"); 
+			<?php
 			$query = "SELECT City, State, Zipcode FROM location"; 
 			$result = mysql_query($query); ?>
 			<label>Location of Death</label>
@@ -55,6 +56,7 @@
 			<option value="<?php echo $line['Zipcode'];?>"> 
 			<?php echo $line['City'].', '.$line['State'] . ' ' . $line['Zipcode'];?> </option>   
 			<?php } ?>
+			<?php mysql_close(); ?>
 			</select>
 		</div>
 
