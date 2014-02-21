@@ -46,14 +46,12 @@
 			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
 			?> 
 			<option value="<?php echo $line['Zipcode'];?>"> 
-			<?php echo $line['City'].', '.$line['State'];?> </option>   
+			<?php echo $line['City'].', '.$line['State'] . ' ' . $line['Zipcode'];?> </option>   
 			<?php } ?> 
 			</select>
 		</div>
 		<div class="col-md-3">
 			<?php 
-			mysql_connect('localhost','root','') or die(mysql_error());
-			mysql_select_db("skdb")or die("Connection Failed"); 
 			$query = "SELECT City, State, Zipcode FROM location"; 
 			$result = mysql_query($query); ?>
 			<label>Lived Zipcode</label>
@@ -62,7 +60,7 @@
 			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
 			?> 
 			<option value="<?php echo $line['Zipcode'];?>"> 
-			<?php echo $line['City'].', '.$line['State'];?> </option>   
+			<?php echo $line['City'].', '.$line['State'] . ' ' . $line['Zipcode'];?> </option>   
 			<?php } ?> 
 			</select>
 		</div>
@@ -75,8 +73,6 @@
 		</div>
 		<div class="col-md-3">
 			<?php 
-			mysql_connect('localhost','root','') or die(mysql_error());
-			mysql_select_db("skdb")or die("Connection Failed"); 
 			$query = "SELECT Name, CID FROM category"; 
 			$result = mysql_query($query); ?>
 			<label>Category</label>
@@ -91,8 +87,6 @@
 		</div>
 		<div class="col-md-3">
 			<?php 
-			mysql_connect('localhost','root','') or die(mysql_error());
-			mysql_select_db("skdb")or die("Connection Failed"); 
 			$query = "SELECT Name, MID FROM motive"; 
 			$result = mysql_query($query); ?>
 			<label>Motive</label>
@@ -103,6 +97,7 @@
 			<option value="<?php echo $line['MID'];?>"> 
 			<?php echo $line['Name'];?> </option>   
 			<?php } ?> 
+			<?php mysql_close(); ?>
 			</select>
 		</div>
 	</div>

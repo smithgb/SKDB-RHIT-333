@@ -22,5 +22,6 @@
 		mysqli_query($conn, "CALL createLocation('" . $country . "','" . $state . "','" . $city . "','" . $zip . "','" . $latitude . "','" . $longitude . "')");
 	}
 
+	mysqli_close($conn);
 	header('Location: ../../index.php');
 ?>

@@ -37,5 +37,6 @@
 		mysqli_query($conn, "CALL insertVictim('" . $fname . "','" . $mname . "','" . $lname . "','" . $gender . "','" . $age . "','" . $deathdate . "','" . $deathloc . "','" . $relation . "','" . $cause . "','" . $img . "')");
 	}
 
+	mysqli_close();
 	header('Location: ../../index.php');
 ?>

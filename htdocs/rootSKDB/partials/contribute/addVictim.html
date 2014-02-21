@@ -42,11 +42,19 @@
 		</div>
 
 		<div class="col-md-2">
+			<?php 
+			mysql_connect('localhost','root','') or die(mysql_error());
+			mysql_select_db("skdb")or die("Connection Failed"); 
+			$query = "SELECT City, State, Zipcode FROM location"; 
+			$result = mysql_query($query); ?>
 			<label>Location of Death</label>
 			<select name="deathloc" id="deathloc" class="form-control">
-				<!-- php script needed -->
-				<option>12345</option>
-				<option>54321</option>
+			<?php 
+			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) { 
+			?> 
+			<option value="<?php echo $line['Zipcode'];?>"> 
+			<?php echo $line['City'].', '.$line['State'] . ' ' . $line['Zipcode'];?> </option>   
+			<?php } ?>
 			</select>
 		</div>
 
