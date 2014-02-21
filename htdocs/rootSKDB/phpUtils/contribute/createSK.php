@@ -43,5 +43,6 @@
 		mysqli_query($conn, "CALL insertSerialKiller('" . $fname . "','" . $mname . "','" . $lname . "','" . $aliases . "','" . $gender . "','" . $birthdate . "','" . $birthzip . "','" . $livezip . "','" . $numV . "','" . $yrsactive . "','" . $deathdate . "','" . $arrestdate . "','" . $punishment . "','" . $cat . "','" . $motive . "','" . $bio . "','" . $img . "')");
 	}
 
+	mysqli_close($conn);
 	header('Location: ../../index.php');
 ?>
